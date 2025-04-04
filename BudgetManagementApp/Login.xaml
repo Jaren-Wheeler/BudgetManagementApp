@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="BudgetManagementApp.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BudgetManagementApp"
+             mc:Ignorable="d"
+             d:DesignHeight="720" d:DesignWidth="1280">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Source="images/LoginBackground.jpg"
+            Stretch="Uniform"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            Grid.RowSpan="3"
+            Margin="-250,0,0,0"/>
+
+
+        <Label Name="lblTitle" FontSize="48px" Margin="25,50,0,0" Grid.Row="0" FontFamily="Comic Sans MS" Foreground="Red">Welcome to Budget Manager</Label>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.499,0.413">
+            <Label Name="lblNewBudget" FontSize="20" Margin="250,-50,0,0">Create a new budget!</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="txtNewBudgetName" Width="200" Margin="250,0,0,0" Height="25"></TextBox>
+            </StackPanel>
+            <Button x:Name="btnNewBudget" Margin="-240,10,0,0" Width="77" Click="btnNewBudget_Click" Content="Create">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Label Name="lblExistingBudget" FontSize="20" Margin="240,-100,0,0">Open an existing budget</Label>
+            <TextBox Name="txtExistingBudget" Width="200" Margin="-240,-100,0,0" Height="25"></TextBox>
+            <Button Name="btnExistingBudget" Margin="-240,-20,0,0" Width="77" Click="btnExistingBudget_Click" Content="Open">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

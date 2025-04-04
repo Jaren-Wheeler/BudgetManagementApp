@@ -1,0 +1,160 @@
+﻿<UserControl x:Class="BudgetManagementApp.AddInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BudgetManagementApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280">
+
+    <Grid Background="{DynamicResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 🧭 Header -->
+        <TextBlock Grid.Row="0"
+                   Text="Add Budget Information"
+                   FontSize="36"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource TextBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,30,0,30"/>
+
+        <!-- 🧾 Form Content -->
+        <StackPanel Grid.Row="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Width="500"
+                    Margin="0,0,0,30">
+
+            <!-- 💸 Net Income Card -->
+            <Border BorderBrush="{DynamicResource TextBrush}"
+                    BorderThickness="1"
+                    CornerRadius="12"
+                    Margin="0,0,0,30"
+                    Padding="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Monthly Income:"
+                               Grid.Row="0" Grid.Column="0"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource TextBrush}"
+                               VerticalAlignment="Center"
+                               Margin="0,0,10,0"/>
+                    <TextBox Name="txtNetIncome"
+                             Grid.Row="0" Grid.Column="1"
+                             Height="35"
+                             Foreground="{DynamicResource TextBrush}"
+                             Background="{DynamicResource BackgroundBrush}"
+                             Margin="0,0,0,10"/>
+
+                    <!-- Wrap button in border to fake corner radius -->
+                    <Border Grid.Row="1" Grid.ColumnSpan="2"
+                            CornerRadius="8"
+                            BorderThickness="1"
+                            BorderBrush="{DynamicResource TextBrush}"
+                            Background="{DynamicResource BackgroundBrush}"
+                            HorizontalAlignment="Center"
+                            Margin="0,10,0,0"
+                            Padding="2">
+                        <Button Name="btnEnterInfo"
+                                Content="Enter"
+                                Width="120"
+                                Height="35"
+                                Background="Transparent"
+                                Foreground="{DynamicResource TextBrush}"
+                                BorderThickness="0"/>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- 🧮 Expense Entry Card -->
+            <Border BorderBrush="{DynamicResource TextBrush}"
+                    BorderThickness="1"
+                    CornerRadius="12"
+                    Padding="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Expense Name:"
+                               Grid.Row="0" Grid.Column="0"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource TextBrush}"
+                               VerticalAlignment="Center"
+                               Margin="0,0,10,5"/>
+                    <TextBox Name="txtCategoryName"
+                             Grid.Row="0" Grid.Column="1"
+                             Height="35"
+                             Margin="0,0,0,5"
+                             Foreground="{DynamicResource TextBrush}"
+                             Background="{DynamicResource BackgroundBrush}"/>
+
+                    <TextBlock Text="Amount Spent:"
+                               Grid.Row="1" Grid.Column="0"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource TextBrush}"
+                               VerticalAlignment="Center"
+                               Margin="0,0,10,5"/>
+                    <TextBox Name="txtAmount"
+                             Grid.Row="1" Grid.Column="1"
+                             Height="35"
+                             Margin="0,0,0,5"
+                             Foreground="{DynamicResource TextBrush}"
+                             Background="{DynamicResource BackgroundBrush}"/>
+
+                    <!-- Save Button -->
+                    <Border Grid.Row="2" Grid.ColumnSpan="2"
+                            CornerRadius="8"
+                            BorderThickness="1"
+                            BorderBrush="{DynamicResource TextBrush}"
+                            Background="{DynamicResource BackgroundBrush}"
+                            HorizontalAlignment="Center"
+                            Margin="0,10,0,0"
+                            Padding="2">
+                        <Button Name="btnSave"
+                                Content="Save Category Info"
+                                Width="200"
+                                Height="35"
+                                Background="Transparent"
+                                Foreground="{DynamicResource TextBrush}"
+                                BorderThickness="0"/>
+                    </Border>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <!-- 📊 Budget Summary -->
+        <TextBlock Grid.Row="2"
+                   Name="lblTotalBudget"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource TextBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,20"/>
+    </Grid>
+</UserControl>

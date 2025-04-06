@@ -47,7 +47,6 @@ namespace BudgetManagementApp
             string existingBudgetName = txtExistingBudget.Text;
 
             string title = db.retrieveBudget(existingBudgetName);
-            decimal amount = db.retrieveBudgetAmount(existingBudgetName);
 
             if (existingBudgetName == "")
             {
@@ -70,10 +69,6 @@ namespace BudgetManagementApp
             }
         }
 
-        // returns the budget name the user typed in.
-        public string GetExistingBudgetName()
-        {
-            return txtExistingBudget.Text;
-        }
+       
     }
 }

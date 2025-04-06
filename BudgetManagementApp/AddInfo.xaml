@@ -14,7 +14,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- 🧭 Header -->
+        <!-- Header -->
         <TextBlock Grid.Row="0"
                    Text="Add Budget Information"
                    FontSize="36"
@@ -23,7 +23,7 @@
                    HorizontalAlignment="Center"
                    Margin="0,30,0,30"/>
 
-        <!-- 🧾 Form Content -->
+
         <StackPanel Grid.Row="1"
                     Orientation="Vertical"
                     HorizontalAlignment="Center"
@@ -31,7 +31,7 @@
                     Width="500"
                     Margin="0,0,0,30">
 
-            <!-- 💸 Net Income Card -->
+            <!-- Net income input -->
             <Border BorderBrush="{DynamicResource TextBrush}"
                     BorderThickness="1"
                     CornerRadius="12"
@@ -61,7 +61,7 @@
                              Background="{DynamicResource BackgroundBrush}"
                              Margin="0,0,0,10"/>
 
-                    <!-- Wrap button in border to fake corner radius -->
+
                     <Border Grid.Row="1" Grid.ColumnSpan="2"
                             CornerRadius="8"
                             BorderThickness="1"
@@ -70,18 +70,18 @@
                             HorizontalAlignment="Center"
                             Margin="0,10,0,0"
                             Padding="2">
-                        <Button Name="btnEnterInfo"
-                                Content="Enter"
-                                Width="120"
-                                Height="35"
-                                Background="Transparent"
-                                Foreground="{DynamicResource TextBrush}"
-                                BorderThickness="0"/>
+                    <Button Name="btnEnterInfo"
+                            Content="Enter"
+                            Width="120"
+                            Height="35"
+                            Background="Transparent"
+                            Foreground="{DynamicResource TextBrush}"
+                            BorderThickness="0"/>
                     </Border>
                 </Grid>
             </Border>
 
-            <!-- 🧮 Expense Entry Card -->
+            <!-- Expense category input -->
             <Border BorderBrush="{DynamicResource TextBrush}"
                     BorderThickness="1"
                     CornerRadius="12"
@@ -127,7 +127,7 @@
                              Foreground="{DynamicResource TextBrush}"
                              Background="{DynamicResource BackgroundBrush}"/>
 
-                    <!-- Save Button -->
+
                     <Border Grid.Row="2" Grid.ColumnSpan="2"
                             CornerRadius="8"
                             BorderThickness="1"
@@ -147,14 +147,5 @@
                 </Grid>
             </Border>
         </StackPanel>
-
-        <!-- 📊 Budget Summary -->
-        <TextBlock Grid.Row="2"
-                   Name="lblTotalBudget"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   Foreground="{DynamicResource TextBrush}"
-                   HorizontalAlignment="Center"
-                   Margin="0,20"/>
     </Grid>
 </UserControl>

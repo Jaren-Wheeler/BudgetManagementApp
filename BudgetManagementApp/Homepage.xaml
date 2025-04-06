@@ -89,7 +89,7 @@
                             BorderThickness="2" Padding="10">
                         <StackPanel>
                             <Label Name="lblGraphicalInfo" Content="Visuals" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
-                            <DockPanel LastChildFill="True">
+                            <StackPanel>
                                 <lvc:PieChart x:Name="MonthlyRatesChart"
                                               Width="370"
                                               Height="370"
@@ -97,7 +97,7 @@
                                               HorizontalAlignment="Center"
                                               VerticalAlignment="Bottom"
                                               LegendLocation="Right"/>
-                            </DockPanel>
+                            </StackPanel>
                         </StackPanel>
                     </Border>
                 </Grid>

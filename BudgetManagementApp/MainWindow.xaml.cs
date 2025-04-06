@@ -24,7 +24,6 @@ namespace BudgetManagementApp
         private Model model; // instance of the model
         public Homepage homepage;
         public Login login;
-       // public string budgetName = Application.Current.Properties["LoggedInBudget"] as string;
         private bool isDarkMode = false;
 
         // private CreateCategory _createCategory;
